@@ -20,76 +20,47 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
 <Style>
-      .dropdown {
-        float: left;
-        overflow: hidden;
-      }
-      
-      .dropdown .dropbtn {
-        font-size: 16px;  
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font: inherit;
-        margin: 0;
-      }
-      
-      .navbar a:hover, .dropdown:hover .dropbtn {
-        background-color: red;
-      }
-      
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        width: 100%;
-        left: 0;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      
-      .dropdown-content .header {
-        background: red;
-        padding: 16px;
-        color: white;
-      }
-      
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-      
-      /* Create three equal columns that floats next to each other */
-      .column {
-        float: left;
-        width: 33.33%;
-        padding: 10px;
-        background-color: #ccc;
-        height: 250px;
-      }
-      
-      .column a {
-        float: none;
-        color: black;
-        padding: 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-      }
-      
-      .column a:hover {
-        background-color: #ddd;
-      }
-      
-      /* Clear floats after the columns */
-      .row1:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      
-      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+   /* Dropdown Button */
+.dropbtn {
+  background-color: #0c84a2;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0e136a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
       @media screen and (max-width: 600px) {
         .column {
           width: 100%;
@@ -101,10 +72,14 @@
 <body>
 
     <!--------- header section start ------------>
+    <header>
+        <div class="logo">
+            <img src="./images2/56.png" alt="">
+        </div>
+    </header>
     <header class="header">
         <div class="header_one">
             <a href="" class="logo"><i class="fas fa-book"> Bookly</i></a>
-
             <form action="" class="search-form">
                 <input id="search-box" type="search" placeholder="search here...">
                 <label for="" class="fas fa-search"></label>
@@ -121,28 +96,34 @@
         <!----- navigation bar -------->
         <div class="header_two">
             <div class="navbar">
-                <div class="dropdown">
-                    <button class="dropbtn">Dropdown 
-                      <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">  
-                      <div class="row1">
-                        <div class="column">
-                          <a href="#">Link 1</a>
-                          <a href="#">Link 2</a>
-                          <a href="#">Link 3</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                <a href="#home">Home</a>
-                <a href="#featured">Featured</a>
-                <a href="#arrivals">Arrivals</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#blogs">Blogs</a>
-                <a href="#e-book">e-book</a>
-                <a href="#e-vouchers">e-vouchers</a>
-                <a href="#about">about</a>
+                <!-- Font Awesome Icon Library -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Education</a>
+                    <a href="#">Stationaries</a>
+                    <a href="#">Fary Tales</a>
+                    <a href="#">Novel</a>
+                    <a href="#">Dictionaries & Encyclopideas</a>
+                    <a href="#">Business & Economic</a>
+                    <a href="#">Health</a>
+                    <a href="#">Technology</a>
+                    <a href="#">Sports</a>
+                    <a href="#">Humor</a>
+                    <a href="#">Religion</a>
+                    <a href="#">Food</a>
+                </div>
+              </div>
+                <a class="active" href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
+                <a class="active" href="#Featured"><i class="fa fa-fw fa-star"></i>Featured</a>
+                <a class="active" href="#Arrivals"><i class="fa fa-fw fa-hand"></i>Arrivals</a>
+                <a class="active" href="#Reveiws"><i class="fa fa-fw fa-box"></i>Reviews</a>
+                <a class="active" href="#Co-Operate & Services"><i class="fa fa-fw fa-mobile"></i>Co-Operate & Services</a>
+                <a class="active" href="#e-book"><i class="fa fa-fw fa-computer"></i>e-book</a>
+                <a class="active" href="#e-vouchers"><i class="fa fa-fw fa-gift"></i>e-vouchers</a>
+                <a class="active" href="#About"><i class="fa fa-fw fa-message"></i>About</a>
                 
             </div>
         </div>
@@ -464,9 +445,9 @@
 
     <section class="newletter">
         <form action="">
-            <h3>subscribe for latest update</h3>
+            <h3>Give email for get latest arrivals</h3>
             <input type="email" placeholder="enter your email" class="box">
-            <input type="submit" value="subscribe" class="btn">
+            <input type="submit" value="Click" class="btn">
         </form>
     </section>
 
@@ -748,13 +729,13 @@
             <h3>deal of the day</h3>
             <h1>upto 50% offers</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, vero. Voluptatibus voluptates inventore nulla vel.
+                This World Book Day, Get Your Hands on Some Beautifully-Illustrated Children’s Books. Don’t Miss Out This World Book Day on the Joy of Traditional Tales, Get Your Discount Now! 
             </p>
             <a href="" class="btn">shop now</a>
         </div>
 
         <div class="image">
-            <img src="./image/deal-img.jpg" alt="">
+            <img src="./images2/55.png" alt="">
         </div>
      </section>
 
